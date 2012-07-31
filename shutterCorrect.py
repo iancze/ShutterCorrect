@@ -2,7 +2,7 @@ import pyfits
 import numpy as np
 
 '''
-ShutterCorrect
+shutterCorrect.py
 Ian Czekala
 Email: iczekala@cfa.harvard.edu
 Project Website: https://github.com/iancze/ShutterCorrect/wiki
@@ -66,22 +66,6 @@ class Exposure(object):
         writeFrame(self.illumination,"Frames/%sillumination.fits" % self.exptime)
         writeFrame(self.shutter,"Frames/%sshutter.fits" % self.exptime)
 
-
-##Normalize each frame to the max number of counts in the image, which is found by taking the median of the central thousand pixels in a 100x100 box centered on [978:1078,979:1079], since this was trimmed in the X (column) direction.
-
-#[978:1078,979:1079]
-#0p1.fits
-# NPIX      MEAN    STDDEV       MIN       MAX     MIDPT
-# 10161     5634.     32.21     5537.     5730.     5632.
-
-#1.fits
-# NPIX      MEAN    STDDEV       MIN       MAX     MIDPT
-# 10201    43566.     605.8    41824.    44920.    43667.
-
-#120.fits
-# NPIX      MEAN    STDDEV       MIN       MAX     MIDPT
-# 10169    42404.      383.    41274.    43554.    42376.
-
 def openData(filename):
     hdulist = pyfits.open(filename)
     data = hdulist[0].data
@@ -100,13 +84,9 @@ def create_master_shutter(exposure_list):
 def main():
     # Fill out the following values with your frames. Will write frames into a Frames/ subdirectory.
 
-    # Each item in the dictionary is keyed by the exposure time. Ex {exptime: filename}
+    # Each item in the dictionary is keyed by the exposure time. For example
+    #{exptime1: filename1, exptime2: filename2}
     frame_dictionary = {0.1:"Frames/0p1.fits",1:"Frames/1.fits",120:"Frames/120.fits"}
-
-#   These are view objects
-#   dict.items() returs (key,value)
-#   dict.keys() returs keys
-#   dict.values() returns the values
 
     #Dictionary of exposure objects
     exposure_dictionary = {}
@@ -124,7 +104,6 @@ def main():
 
     #Inspect all of the frames, but then we can create a master frame by averageing together the best shutter maps. The shutter map for the longest exposure should be 0.0, since we defined this to have approximately zero shutter correction.
     #create_master_shutter()
-
 
 if __name__=="__main__":
     main()
