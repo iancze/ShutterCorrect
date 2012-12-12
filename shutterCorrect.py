@@ -3,6 +3,7 @@
 import argparse
 import pyfits
 
+#If using a different version of the shutter map, change this file."
 shutter_map = pyfits.open("shutter.fits")[0].data
 
 def correct_image(filename, exptime_kw, binning, prefix):
