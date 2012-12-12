@@ -86,7 +86,7 @@ def main():
 
     # Each item in the dictionary is keyed by the exposure time. For example
     #{exptime1: filename1, exptime2: filename2}
-    frame_dictionary = {0.1:"Frames/0p1.fits",1:"Frames/1.fits",120:"Frames/120.fits"}
+    frame_dictionary = {0.1:"Frames/0p1.fits",0.3:"Frames/0p3.fits",1.0:"Frames/1.fits",3.0:"Frames/3.fits",10.:"Frames/10.fits",30:"Frames/30.fits"}
 
     #Dictionary of exposure objects
     exposure_dictionary = {}
