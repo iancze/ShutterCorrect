@@ -2,7 +2,7 @@ import pyfits
 import numpy as np
 
 '''
-shutterCorrect.py
+createMap.py
 Ian Czekala
 Email: iczekala@cfa.harvard.edu
 Project Website: https://github.com/iancze/ShutterCorrect/wiki
