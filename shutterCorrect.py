@@ -19,7 +19,7 @@ def correct_image(filename, exptime_kw, binning, prefix):
     hdulist.writeto(prefix + filename)
 
 def main():
-    parser = argparse.ArgumentParser(prog='fit_pdfs.py', description='Correct CCD images (flats and science frames) for shutter timing effects.')
+    parser = argparse.ArgumentParser(prog='shutterCorrect.py', description='Correct CCD images (flats and science frames) for shutter timing effects.')
     parser.add_argument('-f','--filename',nargs='+',help='Filename or filenames separated by whitespace to shutter correct.')
     parser.add_argument('-l','--listname',help='listname to file containing files to process (one on each line).')
     parser.add_argument('--exptime_kw',help='header keyword for the exposure time, default is "EXPTIME"',default='EXPTIME')
