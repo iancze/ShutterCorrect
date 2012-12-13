@@ -1,13 +1,12 @@
 #ShutterCorrect
 
-For the most up to date information about using ShutterCorrect, visit the wiki at https://github.com/iancze/ShutterCorrect/wiki 
 
 
 * Ian Czekala
 * Email: iczekala@cfa.harvard.edu
 * Organization: Harvard-Smithsonian Center for Astrophysics
 
-This project contains two scripts. The first, `createMap.py`, is to create the `shutter.fits` file from a set of dome or twilight flats. This only needs to be done once, and if you are using this code for the MMTCam, it has already been done for you.
+This project contains two scripts. The first, `createMap.py`, is to create the `shutter.fits` file from a set of dome or twilight flats. This only needs to be done once, and if you are using this code for the MMTCam, it has already been done for you. For detailed information on this process, visit the wiki: https://github.com/iancze/ShutterCorrect/wiki 
 
 The second script, 'shutterCorrect.py`, is used to correct flat and science frames for shutter travel time. Its usage is detailed below.
 
@@ -15,7 +14,7 @@ For CfA machines, Tom Aldcroft has built a full-featured Python 2.7 installation
 
 For csh or tcsh:
 
- 	set path=(/data/astropy/ska/arch/x86_64-linux_CentOS-5/bin $path)
+	set path=(/data/astropy/ska/arch/x86_64-linux_CentOS-5/bin $path)
 
 For bash:
 
