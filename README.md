@@ -1,7 +1,5 @@
 #ShutterCorrect
 
-
-
 * Ian Czekala
 * Email: iczekala@cfa.harvard.edu
 * Organization: Harvard-Smithsonian Center for Astrophysics
@@ -19,6 +17,9 @@ For csh or tcsh:
 For bash:
 
 	export PATH="/data/astropy/ska/arch/x86_64-linux_CentOS-5/bin:$PATH"
+
+ShutterCorrect requires Python 2.7+ and the pyfits module. The above linked distribution has both of these installed. 
+
 
 ## Usage 
 
